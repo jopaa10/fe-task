@@ -36,6 +36,7 @@ const Payment = ({
   bgColor = "",
   color = "",
   cardBgColor = "",
+  boxShadow = "",
 }) => {
   return (
     <section
@@ -53,6 +54,7 @@ const Payment = ({
               key={index}
               cardBgColor={cardBgColor}
               color={color}
+              boxShadow={boxShadow}
               {...item}
             />
           ))}

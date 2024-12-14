@@ -8,13 +8,15 @@ const PaymentCard = ({
   label,
   cardBgColor,
   color,
-}: PaymentCardProps) => {
+  boxShadow,
+}: PaymentCardProps & { boxShadow?: string }) => {
   return (
     <div
       className="payment__card"
       style={{
         backgroundColor: cardBgColor ? cardBgColor : "",
         color: color ? color : "",
+        boxShadow: boxShadow,
       }}
     >
       <span className="payment__card__icon">{icon}</span>

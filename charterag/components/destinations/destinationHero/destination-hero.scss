@@ -10,12 +10,29 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+  }
+
+  .description {
+    background: var(--charterag-section-background-blue-light);
+    display: flex;
+    flex-direction: column;
+    padding-top: 8.3rem;
+    width: 100%;
+    position: relative;
+
+    @include respond(sm-desktop) {
+      padding-inline: 6rem;
+      align-items: center;
+    }
+
+    @include respond(sm-phone) {
+      padding-inline: 6rem;
+    }
 
     .text-section {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      padding-inline: 9rem;
+      bottom: 100%;
+      left: 2%;
       padding-bottom: 5.6rem;
       color: var(--charterag-section-text-color);
 
@@ -29,30 +46,19 @@
         font-size: 4rem;
         font-weight: bold;
       }
-    }
-  }
 
-  .description {
-    background: var(--charterag-section-background-blue-light);
-    display: flex;
-    flex-direction: column;
-    padding-top: 8.3rem;
-    padding-inline: 9.2rem;
-
-    @include respond(sm-desktop) {
-      padding-inline: 6rem;
-      align-items: center;
-    }
-
-    @include respond(sm-phone) {
-      padding-inline: 6rem;
+      @include respond(sm-desktop) {
+        @include flexCenter;
+        flex-direction: column;
+        width: 100%;
+      }
     }
 
     .book-card {
       background: var(--charterag-card-bg-color-white);
       position: absolute;
-      right: 5%;
-      top: 40%;
+      right: 0;
+      bottom: 35%;
       width: 100%;
       max-width: 36.8rem;
       padding: 3.2rem 4rem;
@@ -134,6 +140,7 @@
 
     &__text {
       max-width: 58rem;
+      padding-left: 4rem;
       display: flex;
       flex-direction: column;
       gap: 2.4rem;
