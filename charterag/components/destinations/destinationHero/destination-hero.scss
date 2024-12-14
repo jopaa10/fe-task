@@ -105,7 +105,6 @@
 
       .button-container {
         button {
-          border: none;
           border-radius: 8px;
           background: var(--charterag-button-bg-blue-dark);
           text-transform: uppercase;
@@ -121,7 +120,6 @@
 
           &:hover {
             transform: scale(1.05);
-            cursor: pointer;
           }
         }
 

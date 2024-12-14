@@ -1,6 +1,3 @@
-@import "../../styles/mixins";
-@import "../../styles/variables";
-
 .navbar {
   position: absolute;
   top: 0;
@@ -21,7 +18,6 @@
   &__button {
     z-index: 9999;
     display: none;
-    cursor: pointer;
 
     @include respond(tab-lg_lg) {
       display: flex;
@@ -193,7 +189,7 @@
       border: none;
       font-size: 1.6rem;
       font-weight: bold;
-      color: white;
+      color: var(--charterag-card-text-color-gray);
       text-transform: capitalize;
 
       &:is(:active, :hover) {

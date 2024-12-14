@@ -21,6 +21,9 @@
       flex-direction: column;
       max-width: 37.6rem;
       width: 100%;
+      color: var(--charterag-card-text-color-blue-dark);
+      text-align: start;
+      transition: all 0.5s ease-in-out;
 
       img {
         width: 100%;
@@ -40,6 +43,10 @@
       .card-text {
         font-size: 1.5rem;
         line-height: 22px;
+      }
+
+      &:hover {
+        transform: scale(1.05);
       }
     }
   }

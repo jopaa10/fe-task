@@ -33,11 +33,6 @@
         width: 5rem;
         height: 5rem;
         @include flexCenter;
-        border: none;
-
-        &:hover {
-          cursor: pointer;
-        }
       }
 
       .arrow-left {

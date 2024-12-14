@@ -40,12 +40,10 @@
       height: 5rem;
       background-color: var(--charterag-card-bg-color-white);
       border-radius: 50%;
-      border: none;
       transition: transform 0.5s ease-in-out;
 
       &:hover {
         transform: scale(1.05);
-        cursor: pointer;
       }
     }
   }
@@ -79,9 +77,13 @@
     }
 
     a {
-      color: #008cff;
-      text-decoration: none;
-      border-bottom: 1px dashed #008cff;
+      color: var(--charterag-card-text-color-white);
+      opacity: 0.6;
+      line-height: 28px;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

@@ -85,10 +85,8 @@
       .dot {
         width: 22px;
         height: 9px;
-        border-radius: 1rem;
         background-color: #ccc;
         margin: 0 6px;
-        cursor: pointer;
         transition: background-color 0.3s ease;
       }
       .dot.active {

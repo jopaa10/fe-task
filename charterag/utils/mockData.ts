@@ -220,7 +220,7 @@ export const individualList: CompareItem[] = [
 export const AccordionData: AccordionItem[] = [
   {
     name: "Ultra route",
-    image: "/images/ultraRoute.png",
+    image: "/images/ultraNew.png",
   },
   {
     name: "Greece route",

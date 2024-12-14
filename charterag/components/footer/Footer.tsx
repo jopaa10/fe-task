@@ -46,7 +46,13 @@ const Footer = () => {
                   <h3>{section.title}</h3>
                   <ul>
                     {section.items.map((item, idx) => (
-                      <li key={idx}>{item}</li>
+                      <li key={idx}>
+                        <Link
+                          href={`/${item.toLowerCase().replace(/ + /g, "")}`}
+                        >
+                          {item}
+                        </Link>
+                      </li>
                     ))}
                   </ul>
                 </div>

@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import ArrowRightIcon from "../../../public/assets/ArrowRightIcon";
-
 import ProgressBar from "../../common/progressBar";
 import { DestinationInfo } from "../../types/components";
+import { redirect } from "next/navigation";
 
 function DestinationsCard({
   img,
@@ -17,12 +18,15 @@ function DestinationsCard({
       <div className="overlay">
         <div className="route-info">
           <p className="from-text">From €{price}/person</p>
-          <p className="route-text">
+          <button
+            className="route-text"
+            onClick={() => redirect(`/${routeText}`)}
+          >
             {routeText} route
             <span>
               <ArrowRightIcon />
             </span>
-          </p>
+          </button>
         </div>
         <div className="progress-container">
           <div className="progress-item">
