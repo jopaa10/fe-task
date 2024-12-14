@@ -56,6 +56,10 @@
     margin-bottom: 6.4rem;
     flex-wrap: wrap;
 
+    @include respond(tab-lg_lg) {
+      gap: 6rem;
+    }
+
     h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
