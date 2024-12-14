@@ -28,7 +28,7 @@ const Testimonial = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [activeIndex, testimonials.length]);
+  }, [activeIndex]);
 
   return (
     <section className="testimonial">
