@@ -11,7 +11,7 @@ type PageProps = {
   params: { id: string };
 };
 
-const DestionationPage = ({ params }: PageProps) => {
+const DestionationPage = async ({ params }: PageProps) => {
   const isValidLink = links.some((link) => link.href === `/${params.id}`);
 
   if (!isValidLink) {
