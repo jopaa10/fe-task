@@ -15,7 +15,7 @@ const CompareCard = ({
   return (
     <div className="compare__card" style={{ background: bgColor }}>
       <div className="title">
-        <p>{title}</p>
+        <h3>{title}</h3>
         {displayButton && <span className="button">from 787€</span>}
       </div>
       <div className="list">
