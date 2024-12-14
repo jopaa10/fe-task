@@ -7,12 +7,11 @@ import Payment from "../../../../components/home/payment/Payment";
 import { links } from "../../../../utils/links";
 import NotFound from "./notFound";
 
-type PageProps = {
-  params: { id: string };
-};
+type Params = Promise<{ id: string }>;
 
-const DestionationPage = async ({ params }: PageProps) => {
-  const isValidLink = links.some((link) => link.href === `/${params.id}`);
+const DestionationPage = async ({ params }: { params: Params }) => {
+  const { id } = await params;
+  const isValidLink = links.some((link) => link.href === `/${id}`);
 
   if (!isValidLink) {
     return <NotFound />;

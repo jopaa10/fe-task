@@ -1,3 +1,6 @@
+"use client";
+
+import { redirect } from "next/navigation";
 import AgeRangeIcon from "../../../public/assets/AgeRangeIcon";
 import BoatIcon from "../../../public/assets/BoatIcon";
 import CalendarIcon from "../../../public/assets/CalendarIcon";
@@ -43,7 +46,9 @@ const DestinationHero = () => {
             ))}
           </div>
           <div className="button-container">
-            <button>book now</button>
+            <button onClick={() => redirect("/book-now")} aria-label="book now">
+              book now
+            </button>
             <p>Prices from €1136 per person</p>
           </div>
         </div>
