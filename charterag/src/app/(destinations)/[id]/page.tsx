@@ -7,7 +7,11 @@ import Payment from "../../../../components/home/payment/Payment";
 import { links } from "../../../../utils/links";
 import NotFound from "./notFound";
 
-const DestionationPage = ({ params }: { params: { id: string } }) => {
+type PageProps = {
+  params: { id: string };
+};
+
+const DestionationPage = ({ params }: PageProps) => {
   const isValidLink = links.some((link) => link.href === `/${params.id}`);
 
   if (!isValidLink) {
