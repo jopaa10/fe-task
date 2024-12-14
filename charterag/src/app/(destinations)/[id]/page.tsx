@@ -8,9 +8,7 @@ import { links } from "../../../../utils/links";
 import NotFound from "./notFound";
 
 const DestionationPage = ({ params }: { params: { id: string } }) => {
-  const isValidLink = links.some((link) => link.href === params.id);
-
-  console.log(isValidLink);
+  const isValidLink = links.some((link) => link.href === `/${params.id}`);
 
   if (!isValidLink) {
     return <NotFound />;
