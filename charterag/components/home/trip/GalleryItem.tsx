@@ -3,7 +3,7 @@ import { GalleryItem as GalleryItemType } from "../../types/components";
 
 const GalleryItem = ({ src, alt, width, height }: GalleryItemType) => {
   return (
-    <div className="gallery__item">
+    <div className="gallery__item" data-aos="flip-left">
       <Image src={src} alt={alt} width={width} height={height} />
     </div>
   );

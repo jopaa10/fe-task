@@ -13,7 +13,7 @@ function DestinationsCard({
   progressWidthAdventure,
 }: DestinationInfo) {
   return (
-    <div className="destinations__card">
+    <div className="destinations__card" data-aos="fade-up">
       <Image src={img} alt="" width={1000} height={404} />
       <div className="overlay">
         <div className="route-info">

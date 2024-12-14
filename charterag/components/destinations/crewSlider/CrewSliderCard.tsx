@@ -40,6 +40,7 @@ const CrewSliderCard = ({
     <div
       className="slider-container"
       style={{ flexDirection: changeFlexDirection ? "row-reverse" : "row" }}
+      data-aos="fade-up"
     >
       <div className="slider-image">
         <button

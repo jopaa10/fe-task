@@ -13,6 +13,7 @@ const PaymentCard = ({
   return (
     <div
       className="payment__card"
+      data-aos="flip-left"
       style={{
         backgroundColor: cardBgColor ? cardBgColor : "",
         color: color ? color : "",

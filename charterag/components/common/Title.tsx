@@ -14,7 +14,7 @@ const Title = ({
   color?: string;
 }) => {
   return (
-    <div className="title-container">
+    <div className="title-container" data-aos="fade-right">
       {buttonTitle && (
         <div className="button" style={{ background: background }}>
           <p className="button__title" style={{ color: color }}>

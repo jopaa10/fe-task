@@ -13,7 +13,11 @@ const CompareCard = ({
   compareList: CompareItem[];
 }) => {
   return (
-    <div className="compare__card" style={{ background: bgColor }}>
+    <div
+      className="compare__card"
+      data-aos="flip-left"
+      style={{ background: bgColor }}
+    >
       <div className="title">
         <h3>{title}</h3>
         {displayButton && <span className="button">from 787€</span>}

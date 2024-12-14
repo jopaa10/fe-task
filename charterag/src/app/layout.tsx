@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import { AOSProvider } from "@/aos";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={poppins.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <AOSProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </AOSProvider>
       </body>
     </html>
   );
