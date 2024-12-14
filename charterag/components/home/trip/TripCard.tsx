@@ -1,4 +1,6 @@
-const TripCard = ({ icon, header, text }) => {
+import { TripCard as TripCardType } from "../../types/components";
+
+const TripCard = ({ icon, header, text }: TripCardType) => {
   return (
     <div className="vacations__card">
       <div className="card-container">
