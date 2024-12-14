@@ -1,0 +1,146 @@
+.footer {
+  background-color: var(--charterag-section-background-blue-dark);
+  color: var(--charterag-section-text-color);
+  padding-top: 6.8rem;
+  padding-bottom: 7rem;
+
+  &__container {
+    width: calc(100% - 17.1rem);
+    margin: 0 auto;
+
+    @include respond(sm-desktop) {
+      width: calc(100% - 34.2rem);
+    }
+
+    @include respond(sm-phone) {
+      width: calc(100% - 17.1rem);
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9rem;
+    flex-wrap: wrap;
+
+    .logo {
+      font-size: 3.6rem;
+      font-weight: bold;
+      height: auto;
+    }
+
+    button {
+      width: 5rem;
+      height: 5rem;
+      background-color: var(--charterag-card-bg-color-white);
+      border-radius: 50%;
+      border: none;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sections {
+    display: flex;
+    gap: 12rem;
+    margin-bottom: 6.4rem;
+    flex-wrap: wrap;
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.4rem;
+      color: var(--charterag-card-text-color-white);
+      opacity: 0.6;
+
+      li {
+        margin-bottom: 6px;
+      }
+    }
+
+    a {
+      color: #008cff;
+      text-decoration: none;
+      border-bottom: 1px dashed #008cff;
+    }
+  }
+
+  .socialIcons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .icon {
+      font-size: 24px;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      @include flexCenter;
+
+      &:hover {
+        background: var(--charterag-button-bg-color-blue-grey);
+      }
+    }
+  }
+
+  .separator {
+    width: 100%;
+    background: var(--charterag-card-bg-color-white);
+    height: 1px;
+    opacity: 0.2;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+    margin-top: 6.4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    p {
+      color: var(--charterag-card-text-color-white);
+      opacity: 0.6;
+    }
+
+    .links {
+      display: flex;
+      gap: 6.9rem;
+      flex-wrap: wrap;
+
+      @include respond(sm-desktop) {
+        padding-top: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        opacity: 0.6;
+        display: flex;
+        gap: 1rem;
+
+        &:hover {
+          text-decoration: none;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

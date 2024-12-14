@@ -1,0 +1,18 @@
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: var(--charterag-progress-bar-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 17.7rem;
+
+  .progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--charterag-progress-bar-bg-fill);
+    border-radius: 4px;
+  }
+}

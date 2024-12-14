@@ -1,0 +1,25 @@
+.arrow-button {
+  border: none;
+  border-radius: 5rem;
+  background: var(--charterag-button-bg-color-white);
+  padding: 1rem 1.4rem 1rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1.2rem;
+  line-height: 24px;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: #eef3fc;
+    @include flexCenter;
+  }
+}

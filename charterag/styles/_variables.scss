@@ -1,0 +1,42 @@
+/* devices breakpoints */
+$extra-lg: 80rem;
+$lg: 68.75rem;
+$md: 48rem;
+$md-sm: 30.0625rem;
+$sm: 30rem;
+
+:root {
+  //section
+  --charterag-section-background-blue-light: #ecfbff;
+  --charterag-section-background-blue-dark: #062949;
+  --charterag-section-text-color-blue-dark: #062949;
+  --charterag-section-text-color: #fff;
+
+  //card
+  --charterag-card-bg-color-white: #fff;
+  --charterag-card-bg-color-blue-light: #c4e3e8;
+  --charterag-card-text-color-gray: #656565;
+  --charterag-card-text-color-white: #fff;
+  --charterag-card-text-color-black: #000;
+  --charterag-card-text-color-blue-dark: #062949;
+  --charterag-card-bg-blue-dark: #062949;
+
+  //button color
+  --charterag-button-bg-blue-dark: #062949;
+  --charterag-button-bg-color-white: #fff;
+  --charterag-button-bg-color-blue-grey: #d4e6ed;
+  --charterag-button-text-color-blue-dark: #062949;
+
+  //progress bar
+  --charterag-progress-bar-bg: #fff;
+  --charterag-progress-bar-bg-fill: #66b8ff;
+
+  //acordion
+  --charterag-accordion-bg: #e1f1f5;
+
+  //icon
+  --charterag-icon-bg-color-white: #fff;
+  --charterag-icon-bg-color-black: #000;
+  --charterag-icon-color-white: #fff;
+  --charterag-icon-bg-color-blue-dark: #062949;
+}

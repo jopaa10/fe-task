@@ -1,0 +1,209 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.navbar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  left: 0;
+  z-index: 9999;
+  font-size: 2rem;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5rem 4.2rem;
+  align-items: center;
+  overflow: hidden;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    z-index: 9999;
+    display: none;
+    cursor: pointer;
+
+    @include respond(tab-lg_lg) {
+      display: flex;
+    }
+  }
+
+  &__background {
+    width: 5rem;
+    height: 5rem;
+    top: 4.8rem;
+    left: 3.2rem;
+    background: var(--charterag-icon-bg-color-blue-dark);
+    z-index: 1000;
+    display: none;
+    border-radius: 50%;
+    transition: transform 0.8s;
+
+    @include respond(tab-lg_lg) {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: var(--charterag-button-bg-color-white);
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+
+    display: none;
+
+    @include respond(tab-lg_lg) {
+      display: block;
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    position: fixed;
+    transform: scale(80);
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  nav {
+    z-index: 1000;
+    margin: 0 1rem;
+
+    ul {
+      list-style: none;
+      gap: 3.2rem;
+      display: flex;
+      text-transform: capitalize;
+      font-size: 1.6rem;
+      color: white;
+      flex-wrap: wrap;
+      transition: all 0.6s;
+
+      @include respond(tab-lg_lg) {
+        width: fit-content;
+        opacity: 0;
+        position: fixed;
+        top: -10%;
+        left: 50%;
+        flex-direction: column;
+        transform: translate(-50%, -50%);
+        align-items: center;
+      }
+
+      @include respond(sm-desktop) {
+        gap: 0.5rem;
+      }
+
+      li {
+        transition: all 0.8s ease-in-out;
+
+        a {
+          text-decoration: none;
+          color: var(--charterag-card-text-color-gray);
+
+          &.active {
+            color: var(--charterag-card-text-color-blue-dark);
+          }
+          &:hover {
+            color: var(--charterag-card-text-color-blue-dark);
+          }
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &__checkbox:checked ~ nav > ul > li > a {
+    &.active {
+      color: var(--charterag-card-text-color-white);
+    }
+    &:hover {
+      color: var(--charterag-card-text-color-white);
+    }
+  }
+
+  &__checkbox:checked ~ nav ul {
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    gap: 4rem;
+    width: auto;
+    height: fit-content;
+    @include flexCenter;
+
+    opacity: 1;
+
+    li {
+      transition: none;
+    }
+  }
+
+  .logo {
+    text-transform: capitalize;
+    color: var(--charterag-icon-bg-color-white);
+
+    @include respond(tab-lg_lg) {
+      display: none;
+    }
+  }
+
+  .login-buttons {
+    gap: 3rem;
+    display: flex;
+
+    .login {
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: white;
+      text-transform: capitalize;
+
+      &:is(:active, :hover) {
+        color: var(--charterag-button-bg-color-blue-dark);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__checkbox:checked ~ .login-buttons {
+    width: 0;
+  }
+}

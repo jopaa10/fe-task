@@ -1,0 +1,49 @@
+.destination-cta {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 15.2rem;
+  display: flex;
+  width: 100%;
+  background: var(--charterag-section-background-blue-light);
+
+  &__background {
+    background-image: url("/images/testimonialBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--charterag-section-text-color-blue-dark);
+    height: 83.6rem;
+    width: 100%;
+
+    .text-container {
+      position: absolute;
+      top: 25%;
+      left: 65%;
+      display: flex;
+      flex-direction: column;
+      max-width: 41.5rem;
+      width: 100%;
+
+      @include respond(sm-desktop) {
+        left: 55%;
+        background: rgba(101, 101, 101, 0.5);
+        color: var(--charterag-card-bg-color-white);
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      @include respond(tab-lg_lg) {
+        position: unset;
+        display: flex;
+        margin: 0 auto;
+        align-self: center;
+        height: fit-content;
+      }
+
+      p {
+        font-size: 1.6rem;
+        padding-bottom: 4.3rem;
+        padding-top: 2.2rem;
+      }
+    }
+  }
+}

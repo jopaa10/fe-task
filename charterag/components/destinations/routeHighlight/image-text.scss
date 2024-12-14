@@ -1,0 +1,46 @@
+.image-text {
+  @include flexCenter;
+  padding-top: 18.3rem;
+  flex-direction: column;
+  background: var(--charterag-section-background-blue-light);
+
+  h3 {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+  }
+
+  &__card-container {
+    display: flex;
+    justify-content: center;
+    gap: 6.5rem;
+    flex-wrap: wrap;
+    padding-top: 8rem;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      max-width: 37.6rem;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 37.6rem;
+        max-height: 25.1rem;
+        border-radius: 1rem;
+      }
+
+      .card-title {
+        padding-bottom: 8px;
+        padding-top: 1.6rem;
+        font-size: 2.4rem;
+      }
+
+      .card-text {
+        font-size: 1.5rem;
+        line-height: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+//Media queries //breakpoints
+/*
+0-480px:        Smartphone
+481-768px:      Tablet & large smartphones
+769-1279px:     Laptops, small desktops
+1280+:          Large desktops
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm-phone {
+    @media (max-width: $sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-lg_sm {
+    @media screen and (min-width: $md-sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-lg_lg {
+    @media screen and (max-width: $md) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sm-desktop {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

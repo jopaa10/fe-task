@@ -1,0 +1,109 @@
+.experience {
+  background-color: var(--charterag-section-background-blue-dark);
+  font-size: 2rem;
+  color: var(--charterag-section-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  padding-top: 7.9rem;
+  padding-bottom: 17.2rem;
+
+  &__rating {
+    font-weight: bold;
+    font-size: 2.78rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+
+  .reviews-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include respond(tab-lg_lg) {
+      @include flexCenter;
+      flex-direction: column;
+      gap: 10rem;
+    }
+
+    li {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 23.3rem;
+  }
+
+  .image-container {
+    position: relative;
+    padding-top: 11.8rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      transition: 0.5s ease-in-out;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 70%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.6) 0%,
+          rgba(0, 0, 0, -0.7) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    p {
+      position: absolute;
+      text-transform: capitalize;
+      padding: 2rem;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 1rem;
+      max-width: 27rem;
+    }
+  }
+}

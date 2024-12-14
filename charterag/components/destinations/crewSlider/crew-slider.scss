@@ -1,0 +1,106 @@
+.crew-slider {
+  @include flexCenter;
+  flex-direction: column;
+  gap: 9.9rem;
+  padding-bottom: 15.3rem;
+  background: var(--charterag-section-background-blue-light);
+
+  .slider-container {
+    display: flex;
+    gap: 9.9rem;
+    justify-content: center;
+    color: var(--charterag-button-text-color-blue-dark);
+    margin-bottom: 22.2rem;
+    margin-top: 14.5rem;
+    width: 100%;
+
+    @include respond(tab-lg_lg) {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    .slider-image {
+      width: 100%;
+      height: 100%;
+      max-width: 55.5rem;
+      max-height: 50rem;
+      position: relative;
+
+      :is(.arrow-left, .arrow-right) {
+        position: absolute;
+        background: var(--charterag-button-bg-color-white);
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        @include flexCenter;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .arrow-left {
+        top: 50%;
+        margin-left: 3.2rem;
+
+        @include respond(sm-phone) {
+          top: 35%;
+        }
+      }
+
+      .arrow-right {
+        right: 0;
+        top: 50%;
+        margin-right: 3.2rem;
+
+        @include respond(sm-phone) {
+          top: 35%;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 55.5rem;
+        max-height: 50rem;
+        border-radius: 1.5rem;
+      }
+
+      .title {
+        font-size: 2.2rem;
+        text-transform: capitalize;
+        line-height: 120%;
+        padding-top: 1.4rem;
+        padding-bottom: 0.8rem;
+      }
+
+      .description {
+        font-size: 1.6rem;
+      }
+    }
+
+    .slider-text {
+      width: 45.6rem;
+
+      @include respond(tab-lg_lg) {
+        width: 100%;
+        max-width: 55rem;
+      }
+
+      @include respond(sm-phone) {
+        width: 100%;
+      }
+
+      h3 {
+        line-height: 46px;
+        padding-bottom: 2.4rem;
+      }
+
+      .description {
+        font-size: 1.6rem;
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}

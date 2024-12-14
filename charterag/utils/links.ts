@@ -26,6 +26,6 @@ export const links: NavLink[] = [
   },
   {
     href: "/faq",
-    label: "faq",
+    label: "FAQ",
   },
 ];

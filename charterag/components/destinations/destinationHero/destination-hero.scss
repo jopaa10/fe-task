@@ -1,0 +1,146 @@
+.destination {
+  padding-top: 22.5rem;
+  background: var(--charterag-section-background-blue-light);
+
+  &__hero {
+    background-image: url("/images/destinationHero.png");
+    display: flex;
+    width: 100%;
+    height: 51rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .text-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-inline: 9rem;
+      padding-bottom: 5.6rem;
+      color: var(--charterag-section-text-color);
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .text {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .description {
+    background: var(--charterag-section-background-blue-light);
+    display: flex;
+    flex-direction: column;
+    padding-top: 8.3rem;
+    padding-inline: 9.2rem;
+
+    @include respond(sm-desktop) {
+      padding-inline: 6rem;
+      align-items: center;
+    }
+
+    @include respond(sm-phone) {
+      padding-inline: 6rem;
+    }
+
+    .book-card {
+      background: var(--charterag-card-bg-color-white);
+      position: absolute;
+      right: 5%;
+      top: 40%;
+      width: 100%;
+      max-width: 36.8rem;
+      padding: 3.2rem 4rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      @include respond(sm-desktop) {
+        position: unset;
+        margin-bottom: 4rem;
+      }
+
+      .rating {
+        h3 {
+          font-size: 2.4rem;
+          font-weight: bold;
+          padding-bottom: 8px;
+          color: #062949;
+          line-height: 32px;
+        }
+
+        &__container {
+          display: flex;
+          align-items: center;
+          color: var(--charterag-card-text-color-gray);
+
+          p {
+            padding-left: 6px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .book-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 1.6rem;
+          font-size: 1.5rem;
+          text-transform: capitalize;
+          color: #282828;
+          line-height: 24px;
+        }
+      }
+
+      .button-container {
+        button {
+          border: none;
+          border-radius: 8px;
+          background: var(--charterag-button-bg-blue-dark);
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: var(--charterag-section-text-color);
+          max-width: 28.8rem;
+          width: 100%;
+          min-height: 6rem;
+          height: 100%;
+          margin-bottom: 2rem;
+          transition: transform 0.5s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+          }
+        }
+
+        p {
+          text-align: center;
+          font-size: 1.3rem;
+          line-height: 20px;
+          color: var(--charterag-card-text-color-gray);
+        }
+      }
+    }
+
+    &__text {
+      max-width: 58rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      font-size: 1.8rem;
+      line-height: 28px;
+    }
+  }
+}

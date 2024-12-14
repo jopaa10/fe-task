@@ -1,0 +1,99 @@
+.cta {
+  @include flexCenter;
+  background: var(--charterag-section-background-blue-light);
+  padding-block: 11rem;
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 6rem;
+    padding-bottom: 11.1rem;
+  }
+
+  .images-container {
+    position: relative;
+    width: 100%;
+    min-height: 45rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7.4rem;
+
+    .composition {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: calc(100% - 69rem);
+      z-index: 10;
+      border-radius: 1rem;
+
+      @include respond(tab-lg_lg) {
+        width: calc(100% - 35rem);
+      }
+
+      @include respond(sm-phone) {
+        width: calc(100% - 15rem);
+      }
+
+      &--photo-one,
+      &--photo-two,
+      &--photo-three {
+        position: absolute;
+        border-radius: 1rem;
+        transition: transform 0.3s ease, z-index 0.3s ease;
+      }
+
+      &--photo-three {
+        z-index: 3;
+        width: 80%;
+        bottom: -25%;
+
+        @include respond(tab-lg_lg) {
+          width: 100%;
+        }
+
+        @include respond(sm-phone) {
+          width: 80%;
+        }
+      }
+
+      &--photo-one {
+        z-index: 2;
+        left: -35%;
+        top: 15%;
+        width: 75%;
+
+        @include respond(tab-lg_lg) {
+          width: 75%;
+          left: -25%;
+        }
+
+        @include respond(sm-phone) {
+          width: 80%;
+          left: -25%;
+        }
+      }
+
+      &--photo-two {
+        z-index: 1;
+        width: 75%;
+        right: -35%;
+        top: 15%;
+
+        @include respond(tab-lg_lg) {
+          width: 75%;
+          right: -25%;
+        }
+
+        @include respond(sm-phone) {
+          width: 80%;
+          right: -25%;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        z-index: 20;
+      }
+    }
+  }
+}

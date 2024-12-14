@@ -1,0 +1,57 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.hero {
+  background-image: url("/images/hero.png");
+  position: relative;
+  height: 79rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      360deg,
+      rgba(6, 41, 73, 1) 0%,
+      rgba(6, 41, 73, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--charterag-card-text-color-white);
+    @include flexCenter;
+    flex-direction: column;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  &__list {
+    @include flexCenter;
+    list-style: none;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
