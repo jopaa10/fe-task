@@ -19,6 +19,11 @@
     flex-direction: column;
     overflow: hidden;
 
+    @include respond(sm-desktop) {
+      top: 35%;
+      left: 40%;
+    }
+
     @include respond(tab-lg_lg) {
       top: 45%;
       left: 20%;
@@ -32,6 +37,10 @@
       font-size: 3.6rem;
       font-weight: 500;
       padding-bottom: 5.5rem;
+
+      @include respond(sm-phone) {
+        max-width: 30rem;
+      }
     }
 
     &__container {
