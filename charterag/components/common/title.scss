@@ -5,7 +5,7 @@
   max-width: 70rem;
 
   .button {
-    background: #103c63;
+    background: var(--charterag-button-bg-color-blue-dark-23);
     text-transform: uppercase;
     border-radius: 1rem;
     max-height: 2.5rem;
@@ -16,7 +16,7 @@
     &__title {
       font-size: 1.4rem;
       padding: 1rem 1.6rem;
-      color: white;
+      color: var(--charterag-card-text-color-white);
     }
   }
 

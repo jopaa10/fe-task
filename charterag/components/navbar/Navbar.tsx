@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   const [isChecked, setIsChecked] = useState(false);
+  const [startedScrolling, setStartedScrolling] = useState(false);
 
   const handleRouteSelection = () => {
     setIsChecked(false);
@@ -18,12 +19,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResizeOrScroll = () => {
-      const checkbox = document.querySelector(
-        ".navbar__checkbox"
-      ) as HTMLInputElement;
-
-      if (window.innerWidth > 768 && checkbox) {
-        checkbox.checked = false;
+      if (window.scrollY > 0 && !isChecked) {
+        setStartedScrolling(true);
+      } else {
+        setStartedScrolling(false);
       }
     };
 
@@ -34,7 +33,7 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResizeOrScroll);
       window.removeEventListener("scroll", handleResizeOrScroll);
     };
-  }, []);
+  }, [isChecked]);
 
   return (
     <header className="navbar">
@@ -54,7 +53,14 @@ const Navbar = () => {
       >
         <span className="navbar__icon">&nbsp;</span>
       </label>
-      <div className="navbar__background">&nbsp;</div>
+      <div
+        className="navbar__background"
+        style={{
+          position: !startedScrolling ? "fixed" : "absolute",
+        }}
+      >
+        &nbsp;
+      </div>
       <Logo pathname={pathname} />
       <nav>
         <ul>

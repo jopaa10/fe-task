@@ -1,6 +1,6 @@
 .destination {
   padding-top: 22.5rem;
-  background: var(--charterag-section-background-blue-light);
+  background: var(--charterag-section-bg-color-blue-light);
 
   &__hero {
     background-image: url("/images/destinationHero.png");
@@ -13,7 +13,7 @@
   }
 
   .description {
-    background: var(--charterag-section-background-blue-light);
+    background: var(--charterag-section-bg-color-blue-light);
     display: flex;
     flex-direction: column;
     padding-top: 8.3rem;
@@ -21,12 +21,8 @@
     position: relative;
 
     @include respond(sm-desktop) {
-      padding-inline: 6rem;
+      //padding-inline: 6rem;
       align-items: center;
-    }
-
-    @include respond(sm-phone) {
-      padding-inline: 6rem;
     }
 
     .text-section {
@@ -77,7 +73,7 @@
           font-size: 2.4rem;
           font-weight: bold;
           padding-bottom: 8px;
-          color: #062949;
+          color: var(--charterag-card-text-color-blue-dark);
           line-height: 32px;
         }
 

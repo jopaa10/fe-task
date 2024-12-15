@@ -1,6 +1,6 @@
 .payment {
   @include flexCenter;
-  background-color: var(--charterag-section-background-blue-dark);
+  background-color: var(--charterag-section-bg-color-blue-dark);
 
   background-image: url("/images/paymentBg.png"),
     radial-gradient(

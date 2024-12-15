@@ -1,6 +1,3 @@
-"use client";
-
-import { redirect } from "next/navigation";
 import AgeRangeIcon from "../../../public/assets/AgeRangeIcon";
 import BoatIcon from "../../../public/assets/BoatIcon";
 import CalendarIcon from "../../../public/assets/CalendarIcon";
@@ -9,6 +6,7 @@ import RatingIcon from "../../../public/assets/RatingIcon";
 import WifiIcon from "../../../public/assets/WifiIcon";
 import "./destination-hero.scss";
 import Wrapper from "../../common/Wrapper";
+import ActionButton from "../../common/ActionButton";
 
 const items = [
   { icon: <BoatIcon />, label: "party vibe" },
@@ -47,12 +45,11 @@ const DestinationHero = () => {
               ))}
             </div>
             <div className="button-container">
-              <button
-                onClick={() => redirect("/book-now")}
-                aria-label="book now"
-              >
-                book now
-              </button>
+              <ActionButton
+                text="book now"
+                bgColor="var(--charterag-button-bg-blue-dark)"
+                redirectRoute="/book-now"
+              />
               <p>Prices from €1136 per person</p>
             </div>
           </div>

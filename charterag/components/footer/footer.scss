@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--charterag-section-background-blue-dark);
+  background-color: var(--charterag-section-bg-color-blue-dark);
   color: var(--charterag-section-text-color);
   padding-top: 6.8rem;
   padding-bottom: 7rem;
@@ -7,14 +7,6 @@
   &__container {
     width: calc(100% - 17.1rem);
     margin: 0 auto;
-
-    @include respond(sm-desktop) {
-      width: calc(100% - 34.2rem);
-    }
-
-    @include respond(sm-phone) {
-      width: calc(100% - 17.1rem);
-    }
   }
 
   .container {
@@ -133,11 +125,12 @@
 
       @include respond(sm-desktop) {
         padding-top: 1rem;
+        gap: 2rem;
       }
 
       a {
         text-decoration: none;
-        color: white;
+        color: var(--charterag-card-text-color-white);
         opacity: 0.6;
         display: flex;
         gap: 1rem;

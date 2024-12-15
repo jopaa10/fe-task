@@ -34,7 +34,7 @@
     display: none;
     border-radius: 50%;
     transition: transform 0.8s;
-    position: absolute;
+    position: fixed;
 
     @include respond(tab-lg_lg) {
       display: flex;
@@ -74,7 +74,6 @@
   }
 
   &__checkbox:checked ~ &__background {
-    position: fixed;
     transform: scale(80);
   }
 
@@ -93,7 +92,6 @@
   }
 
   nav {
-    // z-index: 1000;
     margin: 0 1rem;
 
     ul {
@@ -102,7 +100,7 @@
       display: flex;
       text-transform: capitalize;
       font-size: 1.6rem;
-      color: white;
+      color: var(--charterag-card-text-color-white);
       flex-wrap: wrap;
       transition: all 0.6s;
 
@@ -165,7 +163,6 @@
     width: auto;
     height: fit-content;
     @include flexCenter;
-
     opacity: 1;
 
     li {
@@ -199,9 +196,5 @@
         cursor: pointer;
       }
     }
-  }
-
-  &__checkbox:checked ~ .login-buttons {
-    width: 0;
   }
 }

@@ -1,30 +1,12 @@
-"use client";
-
 import Link from "next/link";
-import ArrowUpIcon from "../../public/assets/ArrowUpIcon";
-import FacebookIcon from "../../public/assets/FacebookIcon";
-import InstagramIcon from "../../public/assets/InstagramIcon";
 import LogoIcon from "../../public/assets/LogoIcon";
-import YoutubeIcon from "../../public/assets/YoutubeIcon";
-import { sections } from "../../utils/mockData";
 import Wrapper from "../common/Wrapper";
 import "./footer.scss";
-
-const socialIcons = [
-  { icon: <InstagramIcon />, href: "https://instagram.com" },
-  { icon: <FacebookIcon />, href: "https://facebook.com" },
-  { icon: <YoutubeIcon />, href: "https://youtube.com" },
-];
+import SocialIcons from "./SocialIcons";
+import FooterLinks from "./FooterLinks";
+import FooterButton from "./FooterButton";
 
 const Footer = () => {
-  const handleBackToTop = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <footer className="footer">
       <Wrapper>
@@ -33,38 +15,11 @@ const Footer = () => {
             <span className="logo">
               <LogoIcon fill="white" />
             </span>
-            <button onClick={handleBackToTop}>
-              <span>
-                <ArrowUpIcon />
-              </span>
-            </button>
+            <FooterButton />
           </div>
           <div className="container">
-            <div className="sections">
-              {sections.map((section, index) => (
-                <div key={index}>
-                  <h3>{section.title}</h3>
-                  <ul>
-                    {section.items.map((item, idx) => (
-                      <li key={idx}>
-                        <Link
-                          href={`/${item.toLowerCase().replace(/ + /g, "")}`}
-                        >
-                          {item}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            <div className="socialIcons">
-              {socialIcons.map((social, index) => (
-                <Link href={social.href} key={index} target="_blank">
-                  <span className="icon">{social.icon}</span>
-                </Link>
-              ))}
-            </div>
+            <FooterLinks />
+            <SocialIcons />
           </div>
           <div className="separator" />
           <div className="footer-bottom">

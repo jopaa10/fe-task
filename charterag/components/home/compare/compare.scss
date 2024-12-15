@@ -1,5 +1,5 @@
 .compare {
-  background: var(--charterag-section-background-blue-light);
+  background: var(--charterag-section-bg-color-blue-light);
   @include flexCenter;
   flex-direction: column;
   width: 100%;
@@ -56,7 +56,7 @@
         font-size: 1.6rem;
         padding: 1rem;
         margin-top: 1rem;
-        background: var(--charterag-section-background-blue-dark);
+        background: var(--charterag-section-bg-color-blue-dark);
         border-radius: 1rem;
         color: var(--charterag-section-text-color);
         height: fit-content;

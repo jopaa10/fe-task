@@ -1,6 +1,6 @@
 .cta {
   @include flexCenter;
-  background: var(--charterag-section-background-blue-light);
+  background: var(--charterag-section-bg-color-blue-light);
   padding-block: 11rem;
 
   .buttons {
@@ -8,6 +8,12 @@
     gap: 1rem;
     margin-top: 6rem;
     padding-bottom: 11.1rem;
+    flex-wrap: wrap;
+
+    @include respond(sm-phone) {
+      justify-content: center;
+      gap: 2rem;
+    }
   }
 
   .images-container {

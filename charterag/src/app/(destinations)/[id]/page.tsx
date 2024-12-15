@@ -29,7 +29,7 @@ const DestionationPage = async ({ params }: { params: Params }) => {
         text={`We make it easy to split the cost between your crew 
                 and pay in instalments.
                 `}
-        bgColor={`var(--charterag-section-background-blue-light)`}
+        bgColor={`var(--charterag-section-bg-color-blue-light)`}
         color="#062949"
         cardBgColor="#C5E5EA"
         boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
