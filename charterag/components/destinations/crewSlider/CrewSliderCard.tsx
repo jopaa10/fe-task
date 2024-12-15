@@ -40,9 +40,8 @@ const CrewSliderCard = ({
     <div
       className="slider-container"
       style={{ flexDirection: changeFlexDirection ? "row-reverse" : "row" }}
-      data-aos="fade-up"
     >
-      <div className="slider-image">
+      <div className="slider-image" data-aos="fade-up">
         <button
           className="arrow-left"
           onClick={handlePrevious}
@@ -69,7 +68,7 @@ const CrewSliderCard = ({
           />
         </button>
         <p className="title">{imageTitle}</p>
-        <p className="description">{imageDescription}</p>
+        <p>{imageDescription}</p>
       </div>
       <div className="slider-text">
         <h3>{title}</h3>

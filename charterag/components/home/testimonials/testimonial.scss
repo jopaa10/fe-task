@@ -20,11 +20,7 @@
     overflow: hidden;
 
     @include respond(tab-lg_lg) {
-      top: 35%;
-      left: 40%;
-    }
-
-    @include respond(sm-phone) {
+      top: 45%;
       left: 20%;
     }
 
@@ -47,12 +43,15 @@
     &__card {
       background: var(--charterag-card-bg-color-white);
       max-width: 50rem;
-      max-height: 33.7rem;
       padding: 2.2rem 7.6rem 2.2rem 3rem;
       border-radius: 1rem;
-      gap: 1.6rem;
+      gap: 0.6rem;
       display: flex;
       flex-direction: column;
+
+      @include respond(sm-phone) {
+        max-width: 30rem;
+      }
 
       h3 {
         font-size: 2.2rem;
@@ -78,16 +77,13 @@
       width: fit-content;
       bottom: 0;
 
-      @include respond(tab-lg_lg) {
-        left: 5%;
-      }
-
       .dot {
         width: 22px;
         height: 9px;
         background-color: #ccc;
         margin: 0 6px;
         transition: background-color 0.3s ease;
+        border-radius: 1rem;
       }
       .dot.active {
         background-color: #fff;

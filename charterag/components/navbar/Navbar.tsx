@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   const [isChecked, setIsChecked] = useState(false);
-  const [isBackgroundFixed, setIsBackgroundFixed] = useState(true);
 
   const handleRouteSelection = () => {
     setIsChecked(false);
@@ -22,12 +21,6 @@ const Navbar = () => {
       const checkbox = document.querySelector(
         ".navbar__checkbox"
       ) as HTMLInputElement;
-
-      if (window.scrollY > 0) {
-        setIsBackgroundFixed(false);
-      } else {
-        setIsBackgroundFixed(true);
-      }
 
       if (window.innerWidth > 768 && checkbox) {
         checkbox.checked = false;
@@ -43,6 +36,8 @@ const Navbar = () => {
     };
   }, []);
 
+  console.log(isChecked);
+
   return (
     <header className="navbar">
       <input
@@ -52,15 +47,16 @@ const Navbar = () => {
         checked={isChecked}
         onChange={() => setIsChecked(!isChecked)}
       />
-      <label htmlFor="navi-toggle" className="navbar__button">
+      <label
+        htmlFor="navi-toggle"
+        className="navbar__button"
+        style={{
+          position: isChecked ? "fixed" : "relative",
+        }}
+      >
         <span className="navbar__icon">&nbsp;</span>
       </label>
-      <div
-        className="navbar__background"
-        style={{ position: isBackgroundFixed ? "fixed" : "absolute" }}
-      >
-        &nbsp;
-      </div>
+      <div className="navbar__background">&nbsp;</div>
       <Logo pathname={pathname} />
       <nav>
         <ul>

@@ -25,7 +25,11 @@ const AccordionCard = ({
         <Image src={image} width={406} height={276} alt={name} />
         <div className="panel__progress-container">
           {progressData.map((item, index) => (
-            <div key={index} className="panel__progress-container__progress">
+            <div
+              key={index}
+              className="panel__progress-container__progress"
+              data-aos="fade-left"
+            >
               <p>{item.label}</p>
               <ProgressBar
                 progressWidth={item.progressWidth}

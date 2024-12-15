@@ -82,7 +82,7 @@
       }
 
       @include respond(sm-phone) {
-        max-height: 60rem;
+        max-height: fit-content;
       }
 
       &__progress {

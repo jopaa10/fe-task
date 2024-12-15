@@ -21,10 +21,11 @@
   .reviews-list {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 auto;
     flex-wrap: wrap;
     width: 100%;
+    gap: 21.1rem;
 
     @include respond(tab-lg_lg) {
       @include flexCenter;

@@ -34,6 +34,7 @@
     display: none;
     border-radius: 50%;
     transition: transform 0.8s;
+    position: absolute;
 
     @include respond(tab-lg_lg) {
       display: flex;
@@ -92,7 +93,7 @@
   }
 
   nav {
-    z-index: 1000;
+    // z-index: 1000;
     margin: 0 1rem;
 
     ul {
@@ -158,6 +159,7 @@
     left: 50%;
     flex-direction: column;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     font-size: 2rem;
     gap: 4rem;
     width: auto;

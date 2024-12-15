@@ -8,7 +8,7 @@ const Cta = () => {
   return (
     <section className="cta">
       <Wrapper>
-        <div className="images-container">
+        <div className="images-container" data-aos="flip-left">
           <div className="composition">
             <Image
               src={"/images/partyBoat.png"}

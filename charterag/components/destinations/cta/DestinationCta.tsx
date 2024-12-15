@@ -5,7 +5,7 @@ const DestinationCta = () => {
   return (
     <section className="destination-cta">
       <div className="destination-cta__background">
-        <div className="text-container">
+        <div className="text-container" data-aos="fade-left">
           <h3>Ready to go?</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur. Tellus lectus non purus odio

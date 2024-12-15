@@ -17,6 +17,7 @@
     @include respond(tab-lg_lg) {
       flex-wrap: wrap;
       margin-bottom: 0;
+      gap: 12rem;
     }
 
     .slider-image {
@@ -71,7 +72,7 @@
       }
 
       .description {
-        font-size: 1.6rem;
+        font-size: 2.2rem;
       }
     }
 
@@ -81,6 +82,7 @@
       @include respond(tab-lg_lg) {
         width: 100%;
         max-width: 55rem;
+        padding-top: 1.5rem;
       }
 
       @include respond(sm-phone) {

@@ -28,7 +28,7 @@ const DestinationHero = () => {
             <p className="title">party route</p>
             <p className="text">The best stories are yet to be told</p>
           </div>
-          <div className="book-card">
+          <div className="book-card" data-aos="flip-right">
             <div className="rating">
               <h3>Dubrovnik party route</h3>
               <span className="rating__container">
