@@ -11,6 +11,7 @@
     justify-content: center;
     padding-top: 10.9rem;
     padding-bottom: 9.2rem;
+    width: 100%;
 
     .gallery {
       display: flex;
@@ -24,8 +25,9 @@
         text-align: center;
         font-size: 1.2em;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 17.8rem;
-        height: 17.8rem;
+        max-width: 26.5rem;
+        max-height: 24.1rem;
+        width: 100%;
 
         img {
           width: 100%;
