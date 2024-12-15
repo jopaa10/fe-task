@@ -21,7 +21,6 @@
     position: relative;
 
     @include respond(sm-desktop) {
-      //padding-inline: 6rem;
       align-items: center;
     }
 
