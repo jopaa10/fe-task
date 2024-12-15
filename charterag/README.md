@@ -24,7 +24,7 @@ Ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/charterag.git
+   git clone https://github.com/yourusername/fe-task.git
    ```
 
 2. Navigate to the project directory:
