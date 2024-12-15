@@ -1,12 +1,11 @@
 # Charterag Project
 
-Charterag is a responsive web application built using [Next.js](https://nextjs.org). It features smooth animations powered by the [AOS (Animate on Scroll)](https://michalsnik.github.io/aos/) library and adheres to modern web accessibility standards (WCAG). The styling of the application is crafted using [Sass](https://sass-lang.com), enabling efficient and maintainable CSS.
+Charterag is a responsive web application built using [Next.js](https://nextjs.org). It features smooth animations powered by the [AOS (Animate on Scroll)](https://michalsnik.github.io/aos/) library. The styling of the application is crafted using [Sass](https://sass-lang.com), enabling efficient and maintainable CSS.
 
 ## Features
 
 - **Responsive Design**: Optimized for various screen sizes, ensuring a seamless user experience across devices.
 - **Smooth Animations**: Powered by the AOS library for engaging and dynamic animations.
-- **Accessibility Compliance**: Verified against the [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) standards for accessibility.
 - **Efficient Styling**: Built using Sass for modular, reusable, and maintainable styles.
 
 ## Getting Started
@@ -66,7 +65,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 The main files and directories to get started with:
 
-- **`app/page.tsx`**: The entry point for the main page. You can start editing the application by modifying this file.
+- **`src/app/page.tsx`**: The entry point for the main page. You can start editing the application by modifying this file.
 - **`styles/`**: Contains the Sass files for styling.
 - **`components/`**: Reusable React components for the application.
 - **`utils/`**: Contains utility functions and mock data, including mock data for the navigation bar links.
@@ -82,11 +81,10 @@ To learn more about the technologies used in this project, check out the followi
 - [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
 - [AOS Documentation](https://michalsnik.github.io/aos/) - Explore the capabilities of the AOS animation library.
 - [Sass Documentation](https://sass-lang.com/documentation) - Learn about writing efficient and maintainable CSS with Sass.
-- [WCAG Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) - Understand web accessibility standards.
 
 ## Feedback and Contributions
 
-Feedback and contributions are welcome! Feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/yourusername/charterag).
+Feedback and contributions are welcome! Feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/yourusername/fe-task).
 
 ---
 
