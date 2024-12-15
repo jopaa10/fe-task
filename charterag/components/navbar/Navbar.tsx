@@ -36,8 +36,6 @@ const Navbar = () => {
     };
   }, []);
 
-  console.log(isChecked);
-
   return (
     <header className="navbar">
       <input
