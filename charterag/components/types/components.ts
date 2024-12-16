@@ -70,3 +70,8 @@ export type CompareItem = {
   label: string;
   disabled: boolean;
 };
+
+export type ExperienceImage = {
+  text: string;
+  image: string;
+};

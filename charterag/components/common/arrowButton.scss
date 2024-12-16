@@ -15,7 +15,7 @@
     width: 2.8rem;
     height: 2.8rem;
     border-radius: 50%;
-    background: #eef3fc;
+    background: var(--charterag-button-bg-color-blue-light);
     @include flexCenter;
   }
 }

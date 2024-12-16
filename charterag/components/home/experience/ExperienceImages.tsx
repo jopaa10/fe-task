@@ -1,23 +1,5 @@
 import Image from "next/image";
-
-const ExpImages = [
-  {
-    text: "sail",
-    image: "/images/sail.png",
-  },
-  {
-    text: "party",
-    image: "/images/party.png",
-  },
-  {
-    text: "explore",
-    image: "/images/explore.png",
-  },
-  {
-    text: "relax",
-    image: "/images/relax.png",
-  },
-];
+import { ExpImages } from "../../../utils/mockData";
 
 const ExperienceImages = () => {
   return (

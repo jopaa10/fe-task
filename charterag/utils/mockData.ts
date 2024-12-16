@@ -2,6 +2,7 @@ import {
   AccordionItem,
   CompareItem,
   DestinationInfo,
+  ExperienceImage,
   GalleryItem,
   ImageText,
   ProgressItem,
@@ -290,5 +291,24 @@ export const progressData: ProgressItem[] = [
     progressWidth: "70%",
     progressBgFill: "#1DC072",
     progressBgColor: "#D2D2E2",
+  },
+];
+
+export const ExpImages: ExperienceImage[] = [
+  {
+    text: "sail",
+    image: "/images/sail.png",
+  },
+  {
+    text: "party",
+    image: "/images/party.png",
+  },
+  {
+    text: "explore",
+    image: "/images/explore.png",
+  },
+  {
+    text: "relax",
+    image: "/images/relax.png",
   },
 ];
