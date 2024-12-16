@@ -24,8 +24,8 @@ const CompareCard = ({
       </div>
       <div className="list">
         <ul>
-          {compareList.map((item) => (
-            <li key={item.label}>
+          {compareList.map((item, index) => (
+            <li key={index}>
               <CheckIcon fill={item.disabled ? "#CDD1CC" : "#062949"} />
               {item.label}
             </li>
